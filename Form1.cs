@@ -24,13 +24,27 @@ namespace Calculator
 
         private void btn_Click(object sender, EventArgs e)
         {
-            if (txtOutput.Text.Length == 0)
-                txtOutput.Text = ((Button)sender).Text;
-            else
+            //if (txtOutput.Text== "0")
+            //    txtOutput.Text = ((Button)sender).Text;
+            //else
             txtOutput.Text += ((Button)sender).Text;
         }
 
+        private void btn_OperatorClick(object sender, EventArgs e)
+        {
+            //if (txtOutput.Text.Length == 0)
+            //    txtOutput.Text = ((Button)sender).Text;
+            if (txtOutput.Text[txtOutput.Text.Length-1] == '+')
+            {
 
+                txtOutput.Text.Remove(txtOutput.Text.Length - 2);
+                txtOutput.Text += ((Button)sender).Text;
+            }
+            else
+                txtOutput.Text += ((Button)sender).Text;
+
+            
+        }
         private void form1_DoubleClick(object sender, EventArgs e)
         {
             MessageBox.Show("Double click on " + sender.ToString() + "??! Calm down!");
@@ -93,6 +107,11 @@ namespace Calculator
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtOutput_TextChanged(object sender, EventArgs e)
         {
 
         }
