@@ -31,6 +31,7 @@ namespace Calculator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnNum0 = new System.Windows.Forms.Button();
             this.btnDecimal = new System.Windows.Forms.Button();
             this.btnEqual = new System.Windows.Forms.Button();
@@ -275,11 +276,11 @@ namespace Calculator
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(314, 174);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 75);
             this.button2.TabIndex = 23;
-            this.button2.Text = "<<";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.btnErase_Click);
             // 
@@ -292,6 +293,7 @@ namespace Calculator
             this.button1.TabIndex = 24;
             this.button1.Text = "^2";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.btnPowOf2_Click);
             // 
             // Form1
@@ -325,7 +327,7 @@ namespace Calculator
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

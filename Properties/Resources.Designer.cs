@@ -59,5 +59,15 @@ namespace Calculator.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_315_16 {
+            get {
+                object obj = ResourceManager.GetObject("delete-315-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
